@@ -34,7 +34,6 @@ export default function ProductsTable({ products }: Props) {
     const target = (e as React.MouseEvent<HTMLButtonElement>)
       .target as HTMLSpanElement
     const tr = target.closest('tr') as HTMLTableRowElement
-    console.log(tr)
     const product = getRowProductValues(tr)
     const isDeleted = await deleteProduct(product.id)
     if (isDeleted) {

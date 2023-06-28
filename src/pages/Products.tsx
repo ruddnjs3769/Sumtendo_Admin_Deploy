@@ -27,19 +27,6 @@ export default function Product() {
   )
 }
 
-{
-  /* <Row gutter={8}>
-  <Col xs={24} md={1}>
-    <div></div>
-  </Col>
-  <Col xs={24} md={22}>
-  
-  </Col>
-  <Col xs={24} md={1}>
-    <div></div>
-  </Col>
-  </Row> */
-}
 export interface Product {
   // 제품 정보
   id: string // 제품 ID

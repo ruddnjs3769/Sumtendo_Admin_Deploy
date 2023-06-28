@@ -9,10 +9,10 @@ export function useHydrationProductColumn<T extends object[]>(
 
   const onClickBtn: OnClickBtn = {
     submit: function () {
-      console.log('submit 버튼이 구현되지 않았습니다.')
+      console.warn('Submit button is not implemented.')
     },
     delete: function () {
-      console.log('delete 버튼이 구현되지 않았습니다.')
+      console.warn('Delete button is not implemented.')
     },
   }
 
