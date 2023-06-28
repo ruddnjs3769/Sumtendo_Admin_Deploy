@@ -1,17 +1,28 @@
-export default function Users() {
-  return <div>로그인 합시다요!</div>
-}
+import { useState, useEffect } from 'react'
+import ProductsTable from '../components/ProductsTable'
+import Loading from '../components/Loading'
+import { User, getUsers } from '../apis/admin/users'
+import UsersTable from '../components/UsersTable'
 
-{
-  /* <Row gutter={8}>
-  <Col xs={24} md={1}>
-    <div></div>
-  </Col>
-  <Col xs={24} md={22}>
-  
-  </Col>
-  <Col xs={24} md={1}>
-    <div></div>
-  </Col>
-  </Row> */
+export default function Users() {
+  const [isLoading, setIsLoading] = useState(true)
+  const [users, setUsers] = useState([] as User[])
+
+  useEffect(() => {
+    getUsers().then((users: User[]) => {
+      setUsers(users)
+      setIsLoading(false)
+    })
+  }, [])
+
+  if (isLoading) {
+    return <Loading />
+  }
+
+  console.log(users)
+  return (
+    <div>
+      <UsersTable users={users}></UsersTable>
+    </div>
+  )
 }

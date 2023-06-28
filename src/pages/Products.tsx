@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import ProductsTable from '../components/ProductsTable'
 import Loading from '../components/Loading'
-import { getProducts } from '../apis/admin'
+import { getProducts } from '../apis/admin/product'
 
 export default function Product() {
   const [isLoading, setIsLoading] = useState(true)

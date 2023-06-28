@@ -1,10 +1,9 @@
 import { Table } from 'antd'
 import { productCloumns } from '../constants'
 import { Product } from '../pages/Products'
-import styles from './ProductsTable.module.css'
 import { useHydrationProductColumn } from '../hooks/useProductsData'
 import { getRowProductValues } from '../utiles'
-import { deleteProduct, updateProduct } from '../apis/admin'
+import { deleteProduct, updateProduct } from '../apis/admin/product'
 
 type Props = {
   products: Product[]
@@ -48,9 +47,8 @@ export default function ProductsTable({ products }: Props) {
 
   return (
     <Table
-      rowKey='id' // set the unique key for each row property 'id'
+      rowKey='email' // set the unique key for each row property 'id'
       columns={columns}
-      rowClassName={styles.row}
       // * antd type error 이중 배열을 인자로 받고 있는데 실제로는 object[]를 인자로 받고 있음
       dataSource={products as unknown as Product[][]}
     />

@@ -71,3 +71,21 @@ export const productCloumns = [
     key: 'delete',
   },
 ]
+
+export const userColumns = [
+  {
+    title: 'Email',
+    dataIndex: 'email',
+    key: 'email',
+  },
+  {
+    title: 'Name',
+    dataIndex: 'displayName',
+    key: 'displayName',
+  },
+  {
+    title: 'Profile Image',
+    dataIndex: 'profileImg',
+    key: 'profileImg',
+  },
+]
