@@ -1,4 +1,23 @@
+import { Link } from 'react-router-dom'
 import { Input } from 'antd'
+
+export const LOCAL_ID = 'sumtendo_admin_id'
+export const LOCAL_PASSWORD = 'sumtendo_admin_password'
+
+export const menuItems = [
+  {
+    key: 'center',
+    icon: <Link to='/'>Sumtendo Admin</Link>,
+  },
+  {
+    key: 'settings',
+    icon: <Link to='/users'>User Management</Link>,
+  },
+  {
+    key: 'logout',
+    icon: <Link to='/products'>Product Management</Link>,
+  },
+]
 
 export type ProductCloumn = {
   title: string

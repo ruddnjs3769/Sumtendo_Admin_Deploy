@@ -1,4 +1,4 @@
-import { api } from './index.ts'
+import { api } from './index'
 
 // * 모든 product를 가져옵니다.
 export const getProducts = async () => {

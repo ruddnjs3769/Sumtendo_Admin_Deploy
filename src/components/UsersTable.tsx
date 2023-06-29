@@ -9,7 +9,7 @@ type Props = {
 export default function UsersTable({ users }: Props) {
   return (
     <Table
-      rowKey='id' // set the unique key for each row property 'id'
+      rowKey='email' // set the unique key for each row property 'id'
       columns={userColumns as unknown as ColumnsType<object[]>}
       dataSource={users as unknown as User[][]}
     />
