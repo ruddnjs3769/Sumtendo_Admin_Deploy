@@ -1,8 +1,8 @@
-import { api } from './index'
+import axios from 'axios'
 
 export const authenticateAdmin = async (username: string, password: string) => {
   try {
-    const { data } = await api({
+    const { data } = await axios({
       url: `/api/handler?id=${username}&password=${password}`,
       method: 'GET',
     })
