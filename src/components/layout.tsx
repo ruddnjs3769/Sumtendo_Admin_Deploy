@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Outlet } from 'react-router-dom'
-import Header from './Header'
-import { Menu, Col, Row } from 'antd'
+import { Menu } from 'antd'
 import styles from './layout.module.css'
 
 const menuItems = [
