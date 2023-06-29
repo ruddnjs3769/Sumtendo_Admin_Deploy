@@ -4,11 +4,13 @@ import { Product } from '../pages/Products'
 import { useHydrationProductColumn } from '../hooks/useProductsData'
 import { getRowProductValues } from '../utiles'
 import { deleteProduct, updateProduct } from '../apis/admin/product'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {
   products: Product[]
 }
 export default function ProductsTable({ products }: Props) {
+  const navigate = useNavigate()
   const [columns, onClickBtn] = useHydrationProductColumn(productCloumns)
 
   // * 제출 버튼 클릭시
@@ -21,7 +23,7 @@ export default function ProductsTable({ products }: Props) {
     const isUpdated = await updateProduct(id, restProduct)
     if (isUpdated) {
       const yes = confirm('수정되었습니다. 새로고침 하시겠습니까?')
-      yes && window.location.reload()
+      yes && navigate('/')
     } else {
       alert('수정에 실패하였습니다.')
     }
@@ -38,7 +40,7 @@ export default function ProductsTable({ products }: Props) {
     const isDeleted = await deleteProduct(product.id)
     if (isDeleted) {
       const yes = confirm('삭제되었습니다. 새로고침 하시겠습니까?')
-      yes && window.location.reload()
+      yes && navigate('/')
     } else {
       alert('삭제에 실패하였습니다.')
     }
