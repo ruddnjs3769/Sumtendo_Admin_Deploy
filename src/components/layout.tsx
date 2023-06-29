@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { LOCAL_ID, LOCAL_PASSWORD, menuItems } from '../constants'
 import LoginForm, { LoginFormProps } from './LoginForm'
-import { authenticateAdmin } from '../apis/admin'
+import { authenticateAdmin } from '../apis/admin/login'
 
 export default function Layout() {
   const navigate = useNavigate()
