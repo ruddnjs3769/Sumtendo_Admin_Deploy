@@ -46,7 +46,7 @@ export default function ProductsTable({ products }: Props) {
 
   return (
     <Table
-      rowKey='email' // set the unique key for each row property 'id'
+      rowKey='id' // set the unique key for each row property 'id'
       columns={columns}
       // * antd type error 이중 배열을 인자로 받고 있는데 실제로는 object[]를 인자로 받고 있음
       dataSource={products as unknown as Product[][]}
