@@ -16,9 +16,7 @@ export default function Product() {
     })
   }, [])
 
-  if (isLoading) {
-    return <Loading />
-  }
+  if (isLoading) return <Loading />
 
   return (
     <div>

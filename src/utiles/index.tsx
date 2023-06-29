@@ -1,3 +1,4 @@
+// * 선택된 tr의 row를 순화하면서 값을 가져옵니다. (antd에서 제공하는 form에 맞게 가져오기 때문에 하드코딩 해야 합니다.)
 export function getRowProductValues(rowEl: HTMLTableRowElement) {
   const productList = Array.from(rowEl.querySelectorAll('td')).map(
     (tdEl, i) => {

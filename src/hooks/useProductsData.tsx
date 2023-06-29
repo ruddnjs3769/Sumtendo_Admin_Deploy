@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react'
 import type { ColumnsType } from 'antd/lib/table/interface'
 import { Input, Button } from 'antd'
 
+// * production cloumn에 render기능을 추가합니다.
 export function useHydrationProductColumn<T extends object[]>(
   columns: ColumnsType<T>
 ) {
   const [column, setColumn] = useState([] as ColumnsType<T>)
 
+  // * onClickBtn에 submit, delete 이벤트를 추가할 수 있습니다.
   const onClickBtn: OnClickBtn = {
     submit: function () {
       console.warn('Submit button is not implemented.')
