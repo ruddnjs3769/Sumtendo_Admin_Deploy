@@ -1,6 +1,5 @@
 import loadable from '@loadable/component'
 import { Route, Routes } from 'react-router-dom'
-import './App.css'
 const Layout = loadable(() => import('./components/layout'))
 const Home = loadable(() => import('./pages/Home'))
 const Users = loadable(() => import('./pages/Users'))
